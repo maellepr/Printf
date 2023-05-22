@@ -6,14 +6,14 @@
 /*   By: mapoirie <mapoirie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 17:32:06 by mapoirie          #+#    #+#             */
-/*   Updated: 2023/05/19 17:35:01 by mapoirie         ###   ########.fr       */
+/*   Updated: 2023/05/22 10:11:40 by mapoirie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
-int	ft_percent()
+int	ft_percent(void)
 {
 	write(1, "%", 1);
-	return(1);
+	return (1);
 }

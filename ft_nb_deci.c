@@ -6,11 +6,11 @@
 /*   By: mapoirie <mapoirie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 16:56:14 by mapoirie          #+#    #+#             */
-/*   Updated: 2023/05/19 17:04:05 by mapoirie         ###   ########.fr       */
+/*   Updated: 2023/05/22 10:10:49 by mapoirie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_nb_deci_unsigned(unsigned int nb)
 {

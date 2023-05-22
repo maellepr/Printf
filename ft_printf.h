@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mapoirie <mapoirie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/19 09:27:05 by mapoirie          #+#    #+#             */
-/*   Updated: 2023/05/22 10:10:28 by mapoirie         ###   ########.fr       */
+/*   Created: 2023/05/22 10:15:54 by mapoirie          #+#    #+#             */
+/*   Updated: 2023/05/22 10:27:06 by mapoirie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-int	ft_putstr(char *str)
-{
-	int	ret;
+# include <stdarg.h>
+# include <unistd.h>
+# include <stdio.h>
+# include <limits.h>
 
-	ret = 0;
-	if (!str)
-	{
-		write(1, "(null)", 6);
-		return (6);
-	}
-	while (str[ret])
-	{
-		write(1, &str[ret], 1);
-		ret++;
-	}
-	return (ret);
-}
+int	ft_printf(const char *sentence, ...);
+int	ft_nb_deci(int nb);
+int	ft_putchar(char c);
+int	ft_putstr(char *str);
+int	ft_hexa(unsigned long nb, char *base);
+int	ft_ptrhexa(unsigned long long ptr);
+int	ft_nb_deci_unsigned(unsigned int nb);
+int	ft_percent(void);
+
+#endif

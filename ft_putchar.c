@@ -6,11 +6,11 @@
 /*   By: mapoirie <mapoirie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 13:55:32 by mapoirie          #+#    #+#             */
-/*   Updated: 2023/05/19 09:30:55 by mapoirie         ###   ########.fr       */
+/*   Updated: 2023/05/22 10:11:03 by mapoirie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_putchar(char c)
 {

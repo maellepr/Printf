@@ -6,17 +6,17 @@
 /*   By: mapoirie <mapoirie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 10:08:23 by mapoirie          #+#    #+#             */
-/*   Updated: 2023/05/19 17:19:17 by mapoirie         ###   ########.fr       */
+/*   Updated: 2023/05/22 10:09:14 by mapoirie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_ptrhexa(unsigned long long ptr)
 {
-	int ret;	
-	ret = 0;
+	int	ret;
 
+	ret = 0;
 	if (!ptr)
 	{
 		ret += write(1, "(nil)", 5);
@@ -27,9 +27,9 @@ int	ft_ptrhexa(unsigned long long ptr)
 	return (ret);
 }
 
-int	ft_strlen(char *str)
+unsigned long	ft_strlen(char *str)
 {
-	int	i;
+	unsigned long	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -39,16 +39,14 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-int	ft_hexa(unsigned int nb, char *base)
+int	ft_hexa(unsigned long n, char *base)
 {
-	long	n;
 	int		ret;
 
-	n = nb;
 	ret = 0;
-	if (n <= ft_strlen(base))
+	if (n < ft_strlen(base))
 		ret += ft_putchar(base[n]);
-	if (n > ft_strlen(base))
+	if (n >= ft_strlen(base))
 	{
 		ret += ft_hexa(n / ft_strlen(base), base);
 		ret += ft_hexa(n % ft_strlen(base), base);
