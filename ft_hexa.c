@@ -6,7 +6,7 @@
 /*   By: mapoirie <mapoirie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/19 10:08:23 by mapoirie          #+#    #+#             */
-/*   Updated: 2023/05/22 10:09:14 by mapoirie         ###   ########.fr       */
+/*   Updated: 2023/05/22 13:52:06 by mapoirie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ int	ft_ptrhexa(unsigned long long ptr)
 	return (ret);
 }
 
-unsigned long	ft_strlen(char *str)
+size_t	ft_strlen(char *str)
 {
-	unsigned long	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')
